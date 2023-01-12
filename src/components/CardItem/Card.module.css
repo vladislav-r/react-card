@@ -1,0 +1,84 @@
+.selectionFrame {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #ddd;
+  background: transparent;
+  position: absolute;
+  top: 30px;
+  left: 25%;
+  z-index: 1000px;
+}
+
+.cardItem {
+  font-family: 'Source Code Pro', monospace;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 430px;
+  height: 270px;
+  position: absolute;
+  top: -150px;
+  padding: 25px 15px;
+
+  box-shadow: 0 20px 60px 0 rgb(14 42 90 / 55%);
+  transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+  backface-visibility: false;
+  animation: card 1.5s ease-out;
+  text-shadow: 7px 6px 10px rgb(14 42 90 / 80%);
+}
+
+.cardItem img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  display: block;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes card {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: -150px;
+  }
+}
+
+.cardNumber {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  background: none;
+  border: 0;
+  color: rgb(182, 182, 182);
+  letter-spacing: 3px;
+}
+.cardName {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  font-size: 16px;
+  color: rgb(182, 182, 182);
+  background: 0;
+  border: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.cardDate {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  font-size: 20px;
+  color: rgb(182, 182, 182);
+  border: 0;
+  background: 0;
+  text-align: center;
+  width: 120px;
+  letter-spacing: 2px;
+}
